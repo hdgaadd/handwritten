@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDKProxy/JDKProxy.iml" filepath="$PROJECT_DIR$/JDKProxy/JDKProxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringIOC/SpringIOC.iml" filepath="$PROJECT_DIR$/SpringIOC/SpringIOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/collections-floor.iml" filepath="$PROJECT_DIR$/.idea/collections-floor.iml" />
+    </modules>
+  </component>
+</project>
