@@ -2,16 +2,26 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JDKProxy" />
         <module name="SpringIOC" />
+        <module name="api" />
+        <module name="common" />
+        <module name="JDKProxy" />
+        <module name="rpc-server" />
+        <module name="rpc-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JDKProxy" target="1.5" />
+      <module name="api" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="Dubbo" target="1.8" />
+      <module name="JDKProxy" target="1.8" />
+      <module name="rpc-client" target="1.8" />
+      <module name="rpc-server" target="1.8" />
       <module name="SpringIOC" target="1.5" />
     </bytecodeTargetLevel>
   </component>

@@ -3,9 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo/Dubbo.iml" filepath="$PROJECT_DIR$/Dubbo/Dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDKProxy/JDKProxy.iml" filepath="$PROJECT_DIR$/JDKProxy/JDKProxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIOC/SpringIOC.iml" filepath="$PROJECT_DIR$/SpringIOC/SpringIOC.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/collections-floor.iml" filepath="$PROJECT_DIR$/.idea/collections-floor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo/api/api.iml" filepath="$PROJECT_DIR$/Dubbo/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo/common/common.iml" filepath="$PROJECT_DIR$/Dubbo/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/handwritten.iml" filepath="$PROJECT_DIR$/.idea/handwritten.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo/rpc-client/rpc-client.iml" filepath="$PROJECT_DIR$/Dubbo/rpc-client/rpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dubbo/rpc-server/rpc-server.iml" filepath="$PROJECT_DIR$/Dubbo/rpc-server/rpc-server.iml" />
     </modules>
   </component>
 </project>
