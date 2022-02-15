@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/jdkproxy/pom.xml" />
         <option value="$PROJECT_DIR$/SpringIOC/pom.xml" />
         <option value="$PROJECT_DIR$/Dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/Tomcat/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc/pom.xml" />
       </list>
     </option>
   </component>

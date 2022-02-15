@@ -3,14 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dubbo/Dubbo.iml" filepath="$PROJECT_DIR$/Dubbo/Dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDKProxy/JDKProxy.iml" filepath="$PROJECT_DIR$/JDKProxy/JDKProxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIOC/SpringIOC.iml" filepath="$PROJECT_DIR$/SpringIOC/SpringIOC.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dubbo/api/api.iml" filepath="$PROJECT_DIR$/Dubbo/api/api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dubbo/common/common.iml" filepath="$PROJECT_DIR$/Dubbo/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tomcat/Tomcat.iml" filepath="$PROJECT_DIR$/Tomcat/Tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc/api/api.iml" filepath="$PROJECT_DIR$/rpc/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc/common/common.iml" filepath="$PROJECT_DIR$/rpc/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/handwritten.iml" filepath="$PROJECT_DIR$/.idea/handwritten.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dubbo/rpc-client/rpc-client.iml" filepath="$PROJECT_DIR$/Dubbo/rpc-client/rpc-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dubbo/rpc-server/rpc-server.iml" filepath="$PROJECT_DIR$/Dubbo/rpc-server/rpc-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc/rpc.iml" filepath="$PROJECT_DIR$/rpc/rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc/rpc-client/rpc-client.iml" filepath="$PROJECT_DIR$/rpc/rpc-client/rpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc/rpc-server/rpc-server.iml" filepath="$PROJECT_DIR$/rpc/rpc-server/rpc-server.iml" />
     </modules>
   </component>
 </project>
