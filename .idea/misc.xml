@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/Tomcat/pom.xml" />
         <option value="$PROJECT_DIR$/rpc/pom.xml" />
         <option value="$PROJECT_DIR$/Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/Collection/pom.xml" />
       </list>
     </option>
   </component>

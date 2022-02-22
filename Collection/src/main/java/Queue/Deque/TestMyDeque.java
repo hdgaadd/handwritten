@@ -1,7 +1,9 @@
 package Queue.Deque;
 
-import CollectionsFloor.queue.Queue.MyLinkedList;
-import CollectionsFloor.queue.Queue.MyDeque;
+
+
+import Queue.Queue.MyDeque;
+import Queue.Queue.MyLinkedList;
 
 public class TestMyDeque {
     public static void main(String[] args) {

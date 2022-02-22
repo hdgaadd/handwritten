@@ -11,7 +11,8 @@
         <module name="api" />
         <module name="common" />
         <module name="Tomcat" />
-        <module name="Redis" />
+        <module name="Collection" />
+        <module name="Redis-client" />
         <module name="rpc-server" />
         <module name="JDKProxy" />
         <module name="rpc-client" />
@@ -19,9 +20,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api" target="1.8" />
+      <module name="Collection" target="1.8" />
       <module name="common" target="1.8" />
       <module name="JDKProxy" target="1.8" />
-      <module name="Redis" target="1.5" />
+      <module name="Redis-client" target="1.5" />
       <module name="rpc" target="1.8" />
       <module name="rpc-client" target="1.8" />
       <module name="rpc-server" target="1.8" />
