@@ -10,6 +10,7 @@ import com.codeman.Redis.Protocol;
  * 将命令转换为Redis可识别的命令
  */
 public class CommandTransformUtil {
+
     public static String commandTransform(Command command, byte[]... bytes) {
         StringBuilder sb = new StringBuilder();
 
