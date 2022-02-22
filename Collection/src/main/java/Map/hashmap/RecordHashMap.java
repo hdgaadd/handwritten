@@ -32,23 +32,23 @@ import java.io.InvalidObjectException;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.AbstractMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.com.codeman.util.AbstractMap;
+import java.com.codeman.util.LinkedHashMap;
+import java.com.codeman.util.Map;
+import java.com.codeman.util.Objects;
+import java.com.codeman.util.function.BiConsumer;
+import java.com.codeman.util.function.BiFunction;
+import java.com.codeman.util.function.Consumer;
+import java.com.codeman.util.function.Function;
 import java.io.IOException;
 import java.io.InvalidObjectException;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.com.codeman.util.function.BiConsumer;
+import java.com.codeman.util.function.BiFunction;
+import java.com.codeman.util.function.Consumer;
+import java.com.codeman.util.function.Function;
 import sun.misc.SharedSecrets;
 
 *
@@ -161,7 +161,7 @@ public class RecordHashMap<K,V> extends AbstractMap<K,V>
      * This map usually acts as a binned (bucketed) hash table, but
      * when bins get too large, they are transformed into bins of
      * TreeNodes, each structured similarly to those in
-     * java.util.TreeMap. Most methods try to use normal bins, but
+     * java.com.codeman.util.TreeMap. Most methods try to use normal bins, but
      * relay to TreeNode methods when applicable (simply by checking
      * instanceof a node).  Bins of TreeNodes may be traversed and
      * used like any others, but additionally support faster lookup

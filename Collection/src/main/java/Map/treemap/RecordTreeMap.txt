@@ -26,10 +26,10 @@
 package CollectionsFloor.Map.treemap;
 
 import java.io.Serializable;
-import java.util.Comparator;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
+import java.com.codeman.util.Comparator;
+import java.com.codeman.util.function.BiConsumer;
+import java.com.codeman.util.function.BiFunction;
+import java.com.codeman.util.function.Consumer;
 
 /**
  * A Red-Black tree based {@link NavigableMap} implementation.
@@ -798,7 +798,7 @@ public class RecordTreeMap<K,V>
      * <em>fail-fast</em>, and additionally reports {@link Spliterator#SORTED}
      * and {@link Spliterator#ORDERED} with an encounter order that is ascending
      * key order.  The spliterator's comparator (see
-     * {@link java.util.Spliterator#getComparator()}) is {@code null} if
+     * {@link java.com.codeman.util.Spliterator#getComparator()}) is {@code null} if
      * the tree Map's comparator (see {@link #comparator()}) is {@code null}.
      * Otherwise, the spliterator's comparator is the same as or imposes the
      * same total ordering as the tree Map's comparator.

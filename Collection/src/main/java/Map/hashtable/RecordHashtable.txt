@@ -29,10 +29,10 @@ package CollectionsFloor.Map.hashtable;
 
 
 import java.io.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.function.BiFunction;
+import java.com.codeman.util.concurrent.ThreadLocalRandom;
+import java.com.codeman.util.function.BiConsumer;
+import java.com.codeman.util.function.Function;
+import java.com.codeman.util.function.BiFunction;
 import sun.misc.SharedSecrets;
 
 */
@@ -117,7 +117,7 @@ import sun.misc.SharedSecrets;
  * thread-safe implementation is not needed, it is recommended to use
  * {@link HashMap} in place of {@code Hashtable}.  If a thread-safe
  * highly-concurrent implementation is desired, then it is recommended
- * to use {@link java.util.concurrent.ConcurrentHashMap} in place of
+ * to use {@link java.com.codeman.util.concurrent.ConcurrentHashMap} in place of
  * {@code Hashtable}.
  *
  * @author  Arthur van Hoff
@@ -296,7 +296,7 @@ public class Hashtable<K,V>
      * sequentially.
      *
      * @return  an enumeration of the values in this Map.hashtable.
-     * @see     java.util.Enumeration
+     * @see     java.com.codeman.util.Enumeration
      * @see     #keys()
      * @see     #values()
      * @see     Map

@@ -33,49 +33,49 @@
 
 
 
-package java.util.concurrent;
+package java.com.codeman.util.concurrent;
 
 import java.io.ObjectStreamField;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.AbstractMap;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Set;
-import java.util.Spliterator;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.locks.LockSupport;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.DoubleBinaryOperator;
-import java.util.function.Function;
-import java.util.function.IntBinaryOperator;
-import java.util.function.LongBinaryOperator;
-import java.util.function.ToDoubleBiFunction;
-import java.util.function.ToDoubleFunction;
-import java.util.function.ToIntBiFunction;
-import java.util.function.ToIntFunction;
-import java.util.function.ToLongBiFunction;
-import java.util.function.ToLongFunction;
-import java.util.stream.Stream;
+import java.com.codeman.util.AbstractMap;
+import java.com.codeman.util.Arrays;
+import java.com.codeman.util.Collection;
+import java.com.codeman.util.Comparator;
+import java.com.codeman.util.Enumeration;
+import java.com.codeman.util.HashMap;
+import java.com.codeman.util.Hashtable;
+import java.com.codeman.util.Iterator;
+import java.com.codeman.util.Map;
+import java.com.codeman.util.NoSuchElementException;
+import java.com.codeman.util.Set;
+import java.com.codeman.util.Spliterator;
+import java.com.codeman.util.concurrent.ConcurrentMap;
+import java.com.codeman.util.concurrent.ForkJoinPool;
+import java.com.codeman.util.concurrent.atomic.AtomicReference;
+import java.com.codeman.util.concurrent.locks.LockSupport;
+import java.com.codeman.util.concurrent.locks.ReentrantLock;
+import java.com.codeman.util.function.BiConsumer;
+import java.com.codeman.util.function.BiFunction;
+import java.com.codeman.util.function.BinaryOperator;
+import java.com.codeman.util.function.Consumer;
+import java.com.codeman.util.function.DoubleBinaryOperator;
+import java.com.codeman.util.function.Function;
+import java.com.codeman.util.function.IntBinaryOperator;
+import java.com.codeman.util.function.LongBinaryOperator;
+import java.com.codeman.util.function.ToDoubleBiFunction;
+import java.com.codeman.util.function.ToDoubleFunction;
+import java.com.codeman.util.function.ToIntBiFunction;
+import java.com.codeman.util.function.ToIntFunction;
+import java.com.codeman.util.function.ToLongBiFunction;
+import java.com.codeman.util.function.ToLongFunction;
+import java.com.codeman.util.stream.Stream;
 
 *
  * A hash table supporting full concurrency of retrievals and
  * high expected concurrency for updates. This class obeys the
- * same functional specification as {@link java.util.Hashtable}, and
+ * same functional specification as {@link java.com.codeman.util.Hashtable}, and
  * includes versions of methods corresponding to each method of
  * {@code Hashtable}. However, even though all operations are
  * thread-safe, retrieval operations do <em>not</em> entail locking,
@@ -96,7 +96,7 @@ import java.util.stream.Stream;
  * Iterators, Spliterators and Enumerations return elements reflecting the
  * state of the hash table at some point at or since the creation of the
  * iterator/enumeration.  They do <em>not</em> throw {@link
- * java.util.ConcurrentModificationException ConcurrentModificationException}.
+ * java.com.codeman.util.ConcurrentModificationException ConcurrentModificationException}.
  * However, iterators are designed to be used by only one thread at a time.
  * Bear in mind that the results of aggregate status methods including
  * {@code size}, {@code isEmpty}, and {@code containsValue} are typically
@@ -135,7 +135,7 @@ import java.util.stream.Stream;
  *
  * <p>A ConcurrentHashMap can be used as scalable frequency Map (a
  * form of histogram or multiset) by using {@link
- * java.util.concurrent.atomic.LongAdder} values and initializing via
+ * java.com.codeman.util.concurrent.atomic.LongAdder} values and initializing via
  * {@link #computeIfAbsent computeIfAbsent}. For example, to add a count
  * to a {@code ConcurrentHashMap<String,LongAdder> freqs}, you can use
  * {@code freqs.computeIfAbsent(k -> new LongAdder()).increment();}
@@ -160,7 +160,7 @@ import java.util.stream.Stream;
  * of supplied functions should not depend on any ordering, or on any
  * other objects or values that may transiently change while
  * computation is in progress; and except for forEach actions, should
- * ideally be side-effect-free. Bulk operations on {@link java.util.Map.Entry}
+ * ideally be side-effect-free. Bulk operations on {@link java.com.codeman.util.Map.Entry}
  * objects do not support method {@code setValue}.
  *
  * <ul>
@@ -275,7 +275,7 @@ public class RecordConcurrentHashMap<K,V> extends AbstractMap<K,V>
      * concurrent readability (typically method get(), but also
      * iterators and related methods) while minimizing update
      * contention. Secondary goals are to keep space consumption about
-     * the same or better than java.util.HashMap, and to support high
+     * the same or better than java.com.codeman.util.HashMap, and to support high
      * initial insertion rates on an empty table by many threads.
      *
      * This Map usually acts as a binned (bucketed) hash table.  Each
@@ -2120,7 +2120,7 @@ public class RecordConcurrentHashMap<K,V> extends AbstractMap<K,V>
      * Legacy method testing if some key maps into the specified value
      * in this table.  This method is identical in functionality to
      * {@link #containsValue(Object)}, and exists solely to ensure
-     * full compatibility with class {@link java.util.Hashtable},
+     * full compatibility with class {@link java.com.codeman.util.Hashtable},
      * which supported this method prior to introduction of the
      * Java Collections framework.
      *
