@@ -13,9 +13,9 @@ public class Demo {
         Jedis jedis = new Jedis();
 
         // SET与GET
-        System.out.println(jedis.set("codeman", "hdgaadd"));
+        System.out.println(jedis.set("com/codeman", "hdgaadd"));
 
-        System.out.println(jedis.get("codeman"));
+        System.out.println(jedis.get("com/codeman"));
 
 
         System.out.println("----------------------------------------------");

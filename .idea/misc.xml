@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/rpc/pom.xml" />
         <option value="$PROJECT_DIR$/Redis/pom.xml" />
         <option value="$PROJECT_DIR$/Collection/pom.xml" />
+        <option value="$PROJECT_DIR$/Mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Redisclient/pom.xml" />
+        <option value="$PROJECT_DIR$/Redis-client/pom.xml" />
       </list>
     </option>
   </component>
