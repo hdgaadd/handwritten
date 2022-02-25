@@ -34,6 +34,5 @@ public interface Constant {
 
     String XML_SELECT_RESULTTYPE = "resultType";
 
-
 }
 
