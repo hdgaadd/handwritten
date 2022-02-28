@@ -3,8 +3,7 @@ package com.codeman.constants;
 /**
  * @author hdgaadd
  * Created on 2022/02/23
- *
- * SQL操作类型
+ * @description SQL操作类型
  */
 public enum SqlType {
     SELECT("select"),
