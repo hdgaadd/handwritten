@@ -14,8 +14,9 @@
         <module name="Collection" />
         <module name="Redis-client" />
         <module name="Mybatis" />
-        <module name="JDKProxy" />
+        <module name="Spring" />
         <module name="rpc-server" />
+        <module name="JDKProxy" />
         <module name="rpc-client" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="rpc" target="1.8" />
       <module name="rpc-client" target="1.8" />
       <module name="rpc-server" target="1.8" />
+      <module name="Spring" target="1.5" />
       <module name="SpringIOC" target="1.5" />
       <module name="Tomcat" target="1.5" />
     </bytecodeTargetLevel>

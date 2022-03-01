@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JDKProxy/JDKProxy.iml" filepath="$PROJECT_DIR$/JDKProxy/JDKProxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/Mybatis.iml" filepath="$PROJECT_DIR$/Mybatis/Mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis-client/Redis-client.iml" filepath="$PROJECT_DIR$/Redis-client/Redis-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIOC/SpringIOC.iml" filepath="$PROJECT_DIR$/SpringIOC/SpringIOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tomcat/Tomcat.iml" filepath="$PROJECT_DIR$/Tomcat/Tomcat.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc/api/api.iml" filepath="$PROJECT_DIR$/rpc/api/api.iml" />
