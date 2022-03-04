@@ -1,5 +1,7 @@
 package com.codeman.session;
 
+import com.codeman.session.interfaces.SqlSessionFactory;
+
 import java.io.InputStream;
 
 /**
@@ -9,11 +11,11 @@ import java.io.InputStream;
  */
 public class SqlSessionFactoryBuilder {
 
-    public SqlSessionFactory builder(String fileName) {
-
-    }
-
-    public SqlSessionFactory builder(InputStream inputStream) {
-
-    }
+//    public SqlSessionFactory builder(String fileName) {
+//
+//    }
+//
+//    public SqlSessionFactory builder(InputStream inputStream) {
+//
+//    }
 }
