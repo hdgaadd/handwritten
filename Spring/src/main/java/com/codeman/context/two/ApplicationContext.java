@@ -1,6 +1,6 @@
-package com.codeman.context;
+package com.codeman.context.two;
 
-import com.codeman.bean.BeanFactory;
+import com.codeman.bean.one.BeanFactory;
 
 import java.lang.reflect.Method;
 

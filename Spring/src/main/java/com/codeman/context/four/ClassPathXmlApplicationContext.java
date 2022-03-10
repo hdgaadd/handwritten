@@ -1,4 +1,6 @@
-package com.codeman.context;
+package com.codeman.context.four;
+
+import com.codeman.context.three.AbstractApplicationContext;
 
 /**
  * @author hdgaadd
