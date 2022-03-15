@@ -123,6 +123,25 @@ handwritten
 
 
 
+# Spring
 
+**content**
+
+- Spring IOC and Spring MVC
+
+**process**
+
+- 
+
+**design**
+
+- BeanFactory底层规范
+- Application第二次规范
+- AbstractApplicationContext规范实现者之一
+- ClassPathXmlApplicationContext继承规范实现者，添加其他功能
+
+**knowledge**
+
+- 每一个规范的实现者，其遵循规范所创建出的功能**不同**
 
 # Tomcat
