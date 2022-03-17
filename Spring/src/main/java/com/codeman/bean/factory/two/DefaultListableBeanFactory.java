@@ -27,5 +27,9 @@ public class DefaultListableBeanFactory implements BeanFactory {
         return singletons.get(beanName);
     }
 
+    public List<BeanDefinition> getDefines() {
+        return defines;
+    }
 
+    // TODO: some methods to do, I am tired
 }
