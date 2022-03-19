@@ -1,5 +1,7 @@
 package com.codeman.context;
 
+import com.codeman.context.four.WebApplicationContext;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -9,6 +11,11 @@ import javax.servlet.ServletContextListener;
  * 上下文监控器
  */
 public class ContextLoaderListener implements ServletContextListener{
+
+    private WebApplicationContext webApplicationContext;
+
+    public static final String ROOT_CXT_ATTR = "ROOT_CXT";
+
     public void contextInitialized(ServletContextEvent servletContextEvent) {
 
     }

@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringIOC" />
+        <module name="Netty" />
         <module name="api" />
         <module name="common" />
         <module name="Tomcat" />
         <module name="Collection" />
         <module name="Redis-client" />
         <module name="Mybatis" />
-        <module name="JDKProxy" />
         <module name="Spring" />
         <module name="rpc-server" />
+        <module name="JDKProxy" />
         <module name="rpc-client" />
       </profile>
     </annotationProcessing>
@@ -26,6 +27,7 @@
       <module name="common" target="1.8" />
       <module name="JDKProxy" target="1.8" />
       <module name="Mybatis" target="1.8" />
+      <module name="Netty" target="1.5" />
       <module name="Redis-client" target="1.5" />
       <module name="rpc" target="1.8" />
       <module name="rpc-client" target="1.8" />

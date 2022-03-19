@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/Redisclient/pom.xml" />
         <option value="$PROJECT_DIR$/Redis-client/pom.xml" />
         <option value="$PROJECT_DIR$/Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/Netty/pom.xml" />
       </list>
     </option>
   </component>
