@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/rpc/api/api.iml" filepath="$PROJECT_DIR$/rpc/api/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc/common/common.iml" filepath="$PROJECT_DIR$/rpc/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/handwritten.iml" filepath="$PROJECT_DIR$/.idea/handwritten.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Netty/netty-all/netty-all.iml" filepath="$PROJECT_DIR$/Netty/netty-all/netty-all.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc/rpc.iml" filepath="$PROJECT_DIR$/rpc/rpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc/rpc-client/rpc-client.iml" filepath="$PROJECT_DIR$/rpc/rpc-client/rpc-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc/rpc-server/rpc-server.iml" filepath="$PROJECT_DIR$/rpc/rpc-server/rpc-server.iml" />
