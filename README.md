@@ -42,6 +42,16 @@ handwritten
 
 
 
+# Netty
+
+**knowledge**
+
+- @FunctionalInterface修饰函数式接口，设置该类**只能拥有一个**抽象接口
+
+  函数式接口表示使用该对象作为**入参**时，**必须实现**该抽象接口
+
+
+
 # Redis-client
 
 **process**
