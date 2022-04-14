@@ -1,5 +1,7 @@
 package com.codeman.channel;
 
+import com.codeman.until.concurrent.GenericFutureListener;
+
 import java.util.concurrent.Future;
 
 /**
@@ -9,5 +11,5 @@ import java.util.concurrent.Future;
 public interface ChannelFuture extends Future<Void> { // Future、Void??
     Channel channel();
 
-
+    ChannelFuture addListener(GenericFutureListener<? extends Future<? super Void>> future); // 下界通配符
 }
