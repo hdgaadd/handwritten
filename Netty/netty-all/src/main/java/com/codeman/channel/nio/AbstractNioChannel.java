@@ -8,4 +8,8 @@ import com.codeman.channel.Channel;
  * @description 第一层规范实现
  */
 public class AbstractNioChannel implements Channel {
+    @Override
+    public Unsafe unsafe() {
+        return null;
+    }
 }

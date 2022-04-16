@@ -7,6 +7,7 @@ import lombok.Data;
 import java.io.IOException;
 import java.nio.channels.Selector;
 import java.nio.channels.spi.SelectorProvider;
+import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -29,7 +30,7 @@ public class NioEventLoop implements EventLoop {
 
     private final SelectStrategy selectorStrategy; // [ˈstrætədʒi]策略
 
-    private Queue<Runnable> taskQueue;
+    private Queue<Runnable> taskQueue; // 队列任务类型为实现Runnable的任务
 
     private volatile Thread thread;
 
@@ -60,16 +61,47 @@ public class NioEventLoop implements EventLoop {
 
     @Override
     public Selector selector() {
-        return null;
+        return this.selector;
+    }
+
+    /**
+     * 运行队列所有任务
+     */
+    private void runAllTasks() {
+        for (; ; ) {
+            Runnable task = taskQueue.poll();
+            if (Objects.isNull(task)) {
+                break;
+            }
+            task.run();
+        }
+    }
+
+    private boolean addTasks(Runnable task) {
+        return taskQueue.offer(task);
+    }
+
+    @Override
+    public boolean inEventLoop() {
+        return this.thread == Thread.currentThread(); // Thread.currentThread()返回当前代码段正在被哪个线程调用的信息
+    }
+
+    protected boolean hasTasks() {
+        return !taskQueue.isEmpty();
     }
 
     @Override
     public void execute(Runnable command) {
+        boolean inEventLoop = inEventLoop();
+        taskQueue.add(command);
 
+        // 如果处理任务的线程不是对象中的private volatile Thread thread，则创建新线程去处理任务
+        if (!inEventLoop) {
+            executor.execute(this::run);
+        }
     }
 
-    @Override
-    public boolean isEventLop() {
-        return false;
+    private void run() {
+
     }
 }
