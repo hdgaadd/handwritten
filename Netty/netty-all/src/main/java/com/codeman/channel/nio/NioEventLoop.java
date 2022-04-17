@@ -36,7 +36,7 @@ public class NioEventLoop implements EventLoop {
 
     private Selector selector;
 
-    private final IntSupplier selectNowSupplier = () -> selector.selectNow();
+    private final IntSupplier selectNowSupplier = () -> selector.selectNow(); // 供应商
 
     public NioEventLoop(EventLoopGroup eventLoopGroup, Executor executor, SelectorProvider selectorProvider, SelectStrategy selectorStrategy) {
         this.eventLoopGroup = eventLoopGroup;
@@ -57,7 +57,7 @@ public class NioEventLoop implements EventLoop {
         ChannelPromise promise = new DefaultChannelPromise(channel, this);
         promise.channel().unsafe().register(this, promise);
         return promise;
-    } // 结束
+    }
 
     @Override
     public Selector selector() {
@@ -101,7 +101,40 @@ public class NioEventLoop implements EventLoop {
         }
     }
 
+    /**
+     * 让线程阻塞，直到处理程序的线程为this.线程
+     */
     private void run() {
+        thread = Thread.currentThread();
 
+        while (true) {
+            try {
+                int strategy = selectorStrategy.calculateStrategy(selectNowSupplier, hasTasks()); // [ˈkælkjuleɪt]
+                switch (strategy) {
+                    case SelectStrategy.CONTINUE:
+                        continue;
+                    case SelectStrategy.BUSY_WAIT:
+                    case SelectStrategy.SELECT:
+                        strategy = selector.select();
+                        break;
+                }
+
+                if (strategy > 0) {
+                    processSelectedKeys();
+                }
+
+                runAllTasks();
+            } catch (Exception e) {
+                e.printStackTrace(); // [treɪs]查出
+            }
+
+
+        }
     }
+
+    private void processSelectedKeys() {
+        if (selector.selectedKeys() != null) {
+            processSelectedKeysOptimited(); // ['ɒptɪmaɪzd]充分利用
+        }
+    } // 结束
 }
