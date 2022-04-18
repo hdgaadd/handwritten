@@ -54,6 +54,12 @@ handwritten
 
 - Thread.currentThread()返回当前代码段**正在被哪个线程调用**的信息
 
+- ```
+  iterator.remove(); // 删除当前指针，所指向的元素
+  ```
+
+  
+
 
 
 # Redis-client

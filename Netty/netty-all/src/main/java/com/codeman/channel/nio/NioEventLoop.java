@@ -5,8 +5,11 @@ import com.codeman.until.IntSupplier;
 import lombok.Data;
 
 import java.io.IOException;
+import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
 import java.nio.channels.spi.SelectorProvider;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.Executor;
@@ -137,4 +140,53 @@ public class NioEventLoop implements EventLoop {
             processSelectedKeysOptimited(); // ['ɒptɪmaɪzd]充分利用
         }
     } // 结束
+
+    /**
+     * 遍历所有Key，处理特定的Key
+     */
+    private void processSelectedKeysOptimited() {
+        Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
+        while (iterator.hasNext()) {
+            SelectionKey key = iterator.next();
+            iterator.remove(); // 删除当前指针，所指向的元素
+
+            final Object o = key.attachment(); // [əˈtætʃmənt]附加物
+            if (o instanceof AbstractNioChannel) {
+                processSelectedKey(key, (AbstractNioChannel) o);
+            }
+        }
+    }
+
+    private void processSelectedKey(SelectionKey k, AbstractNioChannel o) {
+        final Channel.Unsafe unsafe = o.unsafe();
+
+        if (k.readyOps() == 0) {
+            return;
+        }
+
+        // 服务端连接客户端 或 客户端连接可读
+        if (k.isAcceptable() || k.isReadable()) {
+            unsafe.read();
+            return;
+        }
+
+        // 客户端连接服务端
+        if (k.isConnectable()) {
+            SocketChannel channel = (SocketChannel) o.getChannel();
+            try {
+                if (channel.finishConnect()) {
+                    // 修改客户端Channel状态
+                    k.interestOps(SelectionKey.OP_READ);
+
+                    // 触发客户端发送消息
+                    o.getDefaultChannelPipeline().
+                } else {
+
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }
