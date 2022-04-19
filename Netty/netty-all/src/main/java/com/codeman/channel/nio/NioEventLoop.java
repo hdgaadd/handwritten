@@ -179,9 +179,9 @@ public class NioEventLoop implements EventLoop {
                     k.interestOps(SelectionKey.OP_READ);
 
                     // 触发客户端发送消息
-                    o.getDefaultChannelPipeline().
+                    o.getDefaultChannelPipeline().fireChannelActive();
                 } else {
-
+                    System.exit(1); // 连接失败，进程退出
                 }
             } catch (IOException e) {
                 e.printStackTrace();
