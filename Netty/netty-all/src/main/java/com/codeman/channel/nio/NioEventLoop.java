@@ -139,7 +139,7 @@ public class NioEventLoop implements EventLoop {
         if (selector.selectedKeys() != null) {
             processSelectedKeysOptimited(); // ['ɒptɪmaɪzd]充分利用
         }
-    } // 结束
+    }
 
     /**
      * 遍历所有Key，处理特定的Key
@@ -179,7 +179,7 @@ public class NioEventLoop implements EventLoop {
                     k.interestOps(SelectionKey.OP_READ);
 
                     // 触发客户端发送消息
-                    o.getDefaultChannelPipeline().fireChannelActive();
+                    o.getPipeline().fireChannelActive();
                 } else {
                     System.exit(1); // 连接失败，进程退出
                 }

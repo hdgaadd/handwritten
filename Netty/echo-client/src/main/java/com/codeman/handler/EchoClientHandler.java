@@ -6,19 +6,19 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/21
+ * Created on 2022/04/25
  */
 @Slf4j
-public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     /**
-     * 管道激活
+     * 管道激活，发送消息
      *
      * @param ctx
      * @throws Exception
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
+        ctx.writeAndFlush("hallo, i am echo-client");
     }
 
     /**
@@ -29,9 +29,6 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        log.info("echo-server收到的消息为：" + msg.toString()); // 读取管道数据
-
-        ctx.writeAndFlush("hallo, i am netty-server");
+        log.info("echo-client收到的消息为：" + msg);
     }
-
 }

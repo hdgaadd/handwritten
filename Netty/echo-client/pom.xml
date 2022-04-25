@@ -12,5 +12,12 @@
     <groupId>com.codeman</groupId>
     <artifactId>echo-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.codeman</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

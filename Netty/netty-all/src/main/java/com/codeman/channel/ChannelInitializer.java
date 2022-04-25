@@ -7,6 +7,8 @@ package com.codeman.channel;
 public abstract class ChannelInitializer<C extends Channel> extends ChannelInboundHandlerAdapter {
     public abstract void initChannel(C ch) throws Exception;
 
-    public void readChannel(ChannelHandlerContext ctx, Object msg) {
+
+    @Override
+    public void channelRead(ChannelHandlerContext channelHandlerContext, Object msg) {
     }
 }

@@ -36,6 +36,7 @@ handwritten
 
 # Collection
 
+- done
 
 
 # JDKProxy
@@ -46,7 +47,7 @@ handwritten
 
 **process**
 
-- 初始化管道，通过管道写入数据、读取数据
+- 初始化管道，服务端、客户端通过管道写入数据、读取数据
 
 **knowledge**
 
@@ -61,8 +62,6 @@ handwritten
 - ```
   iterator.remove(); // 删除当前指针，所指向的元素
   ```
-
-- 
 
 
 

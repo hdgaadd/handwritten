@@ -6,8 +6,8 @@ import com.codeman.until.IntSupplier;
  * @author hdgaadd
  * Created on 2022/04/17
  */
-public class DefaultSelectStrategy implements SelectStrategy{
-    private static final SelectStrategy INSTANCE = new DefaultSelectStrategy();
+public final class DefaultSelectStrategy implements SelectStrategy{
+    public static final SelectStrategy INSTANCE = new DefaultSelectStrategy();
 
     public DefaultSelectStrategy() {
 
