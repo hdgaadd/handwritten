@@ -1,6 +1,7 @@
 package com.codeman.context.three;
 
 import com.codeman.bean.factory.BeanDefinition;
+import com.codeman.bean.factory.two.DefaultListableBeanFactory;
 import com.codeman.context.two.ApplicationContext;
 
 import java.lang.reflect.Method;
@@ -27,8 +28,11 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
      */
     private Map<String, String> controllerMap = new HashMap<String, String>();
 
+    private DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
+
+
     @Override
-    public void refresh() throws Exception {
+    public void refresh() {
 
     }
 
