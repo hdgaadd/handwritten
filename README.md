@@ -168,3 +168,7 @@ handwritten
 - 每一个规范的实现者，其遵循规范所创建出的功能**不同**
 
 # Tomcat
+
+**knowledge**
+
+- uri统一资源标识符、url统一资源定位符
