@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class Hello implements Serializable {
     private String message;
+
     private String description;
 
     public String getMessage() {

@@ -28,7 +28,7 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
      */
     private Map<String, String> controllerMap = new HashMap<String, String>();
 
-    private DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
+    private DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
 
     @Override

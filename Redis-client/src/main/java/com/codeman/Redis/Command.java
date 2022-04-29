@@ -8,7 +8,8 @@ package com.codeman.Redis;
  */
 public enum Command {
     SET,
-    GET,
-    INCR;
 
+    GET,
+
+    INCR;
 }
