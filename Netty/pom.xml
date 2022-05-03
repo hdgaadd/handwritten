@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.codeman</groupId>
+    <groupId>org.codeman</groupId>
     <artifactId>Netty</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>

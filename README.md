@@ -4,28 +4,45 @@
 handwritten
 ├── Collection -- 集合类
      ├── List
-     	 ├── ArrayList
-     	 ├── LinkedList
-     	 └── Vector
      ├── Map
-     	 └── HashMap
      ├── Queue
-     	 ├── ArrayBlockingQueue -- 阻塞队列，Array实现
-     	 ├── Deque -- 双端队列
-     	 ├── PriorityQueue -- 优先级队列
-     	 └── Queue -- 普通队列
-     └── Stack -- 栈
-     	 ├── linkedlistRealize -- LinkedList实现
-     	 └── vectorRealize -- Vector实现
+     └── Stack
 ├── JDKProxy -- JDK动态代理
+     ├── aspects
+     ├── handler
+     ├── service
+     └── utils
+├── Mybatis -- 持久层框架Mybatis
+     ├── binding
+     ├── constants
+     ├── executor
+     ├── mapping
+     ├── session
+     └── utils
+├── Netty -- NIO网络应用框架
+     ├── echo-client
+     ├── echo-server
+     └── netty-all
 ├── Redis-client -- Redis客户端
-├── rpc
+     ├── JedisClient
+     ├── Redis
+     └── util
+├── rpc -- 远程过程调用
      ├── api
      ├── common
      ├── rpc-client
      └── rpc-server
-├── SpringIOC
-└── Tomcat
+├── Spring
+     ├── annotation
+     ├── bean
+     ├── context
+     ├── servlet
+     └── utils
+├── Tomcat -- Http资源服务器
+     ├── config
+     ├── http
+     └── servlet
+└── utils -- 工具
 ```
 
 
