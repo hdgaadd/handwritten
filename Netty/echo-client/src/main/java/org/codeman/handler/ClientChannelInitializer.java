@@ -14,6 +14,5 @@ public class ClientChannelInitializer extends ChannelInitializer {
     @Override
     public void initChannel(Channel ch) throws Exception {
         ch.pipeline().addLast(new EchoClientHandler());
-
     }
 }

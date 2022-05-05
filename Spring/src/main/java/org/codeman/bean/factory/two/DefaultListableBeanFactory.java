@@ -17,8 +17,10 @@ import java.util.Map;
  */
 public class DefaultListableBeanFactory implements BeanFactory {
 
-    private List<BeanDefinition> defines = new ArrayList<>();
-
+    private List<BeanDefinition> beanDefinitions = new ArrayList<>();
+    /**
+     * 单例bean
+     */
     private Map<String, Object> singletons = new HashMap<>();
 
 
@@ -27,9 +29,31 @@ public class DefaultListableBeanFactory implements BeanFactory {
         return singletons.get(beanName);
     }
 
-    public List<BeanDefinition> getDefines() {
-        return defines;
+    public List<BeanDefinition> getBeanDefinitions() {
+        return beanDefinitions;
+    }
+
+    public void setBeanDefinitions(List<BeanDefinition> beanDefinitions) {
+        this.beanDefinitions.addAll(beanDefinitions);
+    }
+
+    public Map<String, Object> getSingletons() {
+        return singletons;
     }
 
     // TODO: some methods to do, I am tired
+
+    /**
+     * 将所保存的BeanDefinition进行实例化 -> 注册
+     */
+    public void instanceBeans() {
+
+    }
+
+    /**
+     * 对所注册的BeanDefinition进行属性注入
+     */
+    public void injectObjects() {
+
+    }
 }

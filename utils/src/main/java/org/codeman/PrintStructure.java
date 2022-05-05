@@ -26,7 +26,7 @@ public class PrintStructure {
      */
     private static final int LAYERS = 2; // ['leɪəz]
     /**
-     * 结构没有以"src"开头的模块
+     * 程序组成结构没有以"src"开头的模块
      */
     private static final List<String> noSrc = new ArrayList<String>(){{
         add("Netty");

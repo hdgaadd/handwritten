@@ -75,7 +75,9 @@ handwritten
 
 **process**
 
-- 把方法**转换**为Redis可识别的命令，通过**Socket**向Redis发送，通过Socket接收Redis消息
+- 把方法与入参，**转换**为Redis可识别的命令
+- 通过**Socket**向Redis发送后执行命令
+- 通过Socket接收Redis消息
 
 **knowledge**
 
@@ -160,7 +162,10 @@ handwritten
 
 **process**
 
-- 
+- 读取配置文件，扫描指定文件夹，创建bean的财产BeanDefinition
+- 对创建的BeanDefinition进行保存
+- 将所保存的BeanDefinition进行实例化 -> 注册
+- 对所注册的BeanDefinition进行属性注入
 
 **design**
 
