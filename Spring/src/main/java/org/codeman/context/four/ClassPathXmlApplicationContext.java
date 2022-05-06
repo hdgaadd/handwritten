@@ -9,4 +9,8 @@ import org.codeman.context.three.AbstractApplicationContext;
  */
 public class ClassPathXmlApplicationContext extends AbstractApplicationContext {
 
+    public ClassPathXmlApplicationContext(String fileName) {
+        super.configFile = fileName;
+        super.refresh();
+    }
 }

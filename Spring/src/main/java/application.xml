@@ -2,11 +2,11 @@
 <beans>
 	<component-scan base-package="test"></component-scan>
 
-	<bean id="userService" class="test.org.codeman.service.UserService">
+	<bean id="userService" class="test.service.UserService">
 	  <property name="user" ref="user"></property>
 	</bean>
 	<bean id="user" class="test.bean.User">
 		<property name="id" value="codeman"></property>
-		<property name="name" value="hdgaadd"></property>
+		<property name="userName" value="hdgaadd"></property>
 	</bean>
 </beans>
