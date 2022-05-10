@@ -1,4 +1,4 @@
-package org.codeman.bean.one;
+package org.codeman.bean;
 
 /**
  * @author hdgaadd

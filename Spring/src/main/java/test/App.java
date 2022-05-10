@@ -1,7 +1,7 @@
 package test;
 
-import org.codeman.context.four.ClassPathXmlApplicationContext;
-import org.codeman.context.two.ApplicationContext;
+import org.codeman.context.ClassPathXmlApplicationContext;
+import org.codeman.context.ApplicationContext;
 import test.service.UserService;
 
 /**
@@ -14,6 +14,7 @@ public class App {
 
         UserService userService = (UserService) ctx.getBean("userService");
         System.out.println(userService.getUser());
-        // NullPointException是因为核心类没有开发完毕
+        // NullPointException原因为：核心类没有开发完毕
+        // TODO: 完善相关核心类
     }
 }

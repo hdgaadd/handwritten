@@ -1,7 +1,5 @@
 package org.codeman.context;
 
-import org.codeman.context.four.WebApplicationContext;
-
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 

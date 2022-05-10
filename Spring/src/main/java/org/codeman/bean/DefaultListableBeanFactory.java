@@ -1,7 +1,4 @@
-package org.codeman.bean.factory.two;
-
-import org.codeman.bean.factory.BeanDefinition;
-import org.codeman.bean.one.BeanFactory;
+package org.codeman.bean;
 
 import java.util.ArrayList;
 import java.util.HashMap;

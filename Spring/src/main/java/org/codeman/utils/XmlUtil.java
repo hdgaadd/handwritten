@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.codeman.bean.factory.ApplicationXmlResult;
-import org.codeman.bean.factory.BeanDefinition;
-import org.codeman.bean.factory.PropertyDefinition;
+import org.codeman.bean.ApplicationXmlResult;
+import org.codeman.bean.BeanDefinition;
+import org.codeman.bean.PropertyDefinition;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

@@ -1,4 +1,4 @@
-package org.codeman.bean.factory;
+package org.codeman.bean;
 
 /**
  * @author hdgaadd

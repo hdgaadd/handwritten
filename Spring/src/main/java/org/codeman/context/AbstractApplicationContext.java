@@ -1,15 +1,11 @@
-package org.codeman.context.three;
+package org.codeman.context;
 
-import com.sun.org.glassfish.gmbal.ManagedOperation;
-import org.codeman.annotation.Controller;
-import org.codeman.bean.factory.ApplicationXmlResult;
-import org.codeman.bean.factory.BeanDefinition;
-import org.codeman.bean.factory.two.DefaultListableBeanFactory;
-import org.codeman.context.two.ApplicationContext;
+import org.codeman.bean.ApplicationXmlResult;
+import org.codeman.bean.BeanDefinition;
+import org.codeman.bean.DefaultListableBeanFactory;
 import org.codeman.utils.XmlUtil;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;

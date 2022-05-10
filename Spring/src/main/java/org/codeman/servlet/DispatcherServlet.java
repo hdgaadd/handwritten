@@ -1,7 +1,7 @@
 package org.codeman.servlet;
 
 import org.codeman.context.ContextLoaderListener;
-import org.codeman.context.four.WebApplicationContext;
+import org.codeman.context.WebApplicationContext;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

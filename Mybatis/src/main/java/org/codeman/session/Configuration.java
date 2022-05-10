@@ -1,4 +1,4 @@
-package org.codeman.session.config;
+package org.codeman.session;
 
 /**
  * @author hdgaadd

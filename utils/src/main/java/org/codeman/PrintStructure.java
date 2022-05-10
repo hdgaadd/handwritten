@@ -46,7 +46,7 @@ public class PrintStructure {
      * @param file
      * @param directionParent
      * @param directionChild
-     * @param index
+     * @param index 本次遍历所在的层数
      */
     private static void loopTraverse(File file, String directionParent, String directionChild, int index) {
         File[] files = file.listFiles();
@@ -62,7 +62,7 @@ public class PrintStructure {
                 String firstDescription = getDescription(curFile);
                 System.out.println(firstDecoration + curFileName + firstDescription);
 
-                // 处理galaxy文件夹
+                // 处理程序组成结构没有以"src"开头的模块
                 if (!noSrc.contains(curFileName)) {
                     curFile = new File(file.toString() + "\\" + curFileName + "\\src\\main\\java\\org\\codeman");
                 }

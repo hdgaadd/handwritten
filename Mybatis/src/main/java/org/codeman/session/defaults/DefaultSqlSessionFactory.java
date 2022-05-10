@@ -1,6 +1,6 @@
-package org.codeman.session.implementor;
+package org.codeman.session.defaults;
 
-import org.codeman.session.interfaces.SqlSessionFactory;
+import org.codeman.session.SqlSessionFactory;
 
 /**
  * @author hdgaadd
