@@ -16,6 +16,7 @@ public class PrintStructure {
         add(".git");
         add(".idea");
         add("target");
+        add("Z_staging box");
     }};
     private static final String FIRST_DIRECTION_PARENT = "├── ";
     private static final String FIRST_DIRECTION_CHILD = "└── ";

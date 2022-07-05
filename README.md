@@ -12,13 +12,6 @@ handwritten
      ├── handler
      ├── service
      └── utils
-├── Mybatis -- 持久层框架Mybatis
-     ├── binding
-     ├── constants
-     ├── executor
-     ├── mapping
-     ├── session
-     └── utils
 ├── Netty -- NIO网络应用框架
      ├── echo-client
      ├── echo-server
@@ -32,12 +25,6 @@ handwritten
      ├── common
      ├── rpc-client
      └── rpc-server
-├── Spring
-     ├── annotation
-     ├── bean
-     ├── context
-     ├── servlet
-     └── utils
 ├── Tomcat -- Http资源服务器
      ├── config
      ├── http
@@ -180,7 +167,7 @@ handwritten
 
 
 
-## Mybatis
+### Mybatis
 
 **knowledge**
 
