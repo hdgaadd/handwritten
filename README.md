@@ -2,6 +2,7 @@
 
 ```lua
 handwritten
+├── ClassLoader -- 类加载器
 ├── Collection -- 集合类
      ├── List
      ├── Map
@@ -29,7 +30,9 @@ handwritten
      ├── config
      ├── http
      └── servlet
-└── utils -- 工具
+└── z-staging box
+     ├── ans -- 暂存箱
+     └── tool -- 工具
 ```
 
 
@@ -193,3 +196,23 @@ handwritten
 - uri统一资源标识符、url统一资源定位符
 - Sting对象的equalsIgnoreCase()，**忽略**两者的大小写，而进行字符串比较
 - **java.util.Property**的load()，可以**解析xml文件**，解析格式以"="进行切割
+
+
+
+## ClassLoader
+
+**process**
+
+- 重写findClass, 将类自定义加载成byte[]后，传递给defindClass
+
+**knowledge**
+
+- **将.class文件转换为jar**
+
+  ```
+  cd C:\Java\jdk1.8.0_311\bin
+  
+  jar cvf Hello.jar Hello.class
+  ```
+
+  
