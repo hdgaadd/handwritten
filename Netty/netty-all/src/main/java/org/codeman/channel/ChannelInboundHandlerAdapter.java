@@ -2,7 +2,7 @@ package org.codeman.channel;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/21
+ * created on 2022/04/21
  */
 public class ChannelInboundHandlerAdapter implements ChannelInboundHandler{
     /**

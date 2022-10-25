@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/21
+ * created on 2022/04/21
  */
 @SpringBootApplication
 public class EchoClientApplication {

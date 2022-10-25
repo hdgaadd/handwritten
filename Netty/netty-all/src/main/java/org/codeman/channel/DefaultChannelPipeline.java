@@ -8,7 +8,7 @@ import java.nio.channels.SelectableChannel;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/18
+ * created on 2022/04/18
  */
 @Data
 public class DefaultChannelPipeline implements ChannelPipeline { // [ˈpaɪplaɪn]管道

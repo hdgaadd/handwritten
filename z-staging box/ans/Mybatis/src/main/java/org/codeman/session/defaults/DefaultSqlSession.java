@@ -4,7 +4,7 @@ import org.codeman.session.SqlSession;
 
 /**
  * @author hdgaadd
- * Created on 2022/03/04
+ * created on 2022/03/04
  */
 public class DefaultSqlSession implements SqlSession {
 }

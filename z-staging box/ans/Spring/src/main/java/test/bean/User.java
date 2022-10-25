@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @author hdgaadd
- * Created on 2022/05/06
+ * created on 2022/05/06
  */
 @Data
 public class User {

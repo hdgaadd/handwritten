@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @author hdgaadd
- * Created on 2022/03/17
+ * created on 2022/03/17
  */
 public class ApplicationXmlResult {
     private String componentScan;

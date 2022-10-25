@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/11
+ * created on 2022/04/11
  */
 public class ThreadPerTaskExecutor implements Executor {
     /**

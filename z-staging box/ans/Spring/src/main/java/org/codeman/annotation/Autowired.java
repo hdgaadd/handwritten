@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * @author hdgaadd
- * Created on 2022/03/01
- * @description 依赖注入
+ * created on 2022/03/01
+ * @description: 依赖注入
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

@@ -7,7 +7,7 @@ import java.util.concurrent.Executor;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/11
+ * created on 2022/04/11
  */
 public interface EventExecutor extends Executor {
     ChannelFuture register(Channel channel);

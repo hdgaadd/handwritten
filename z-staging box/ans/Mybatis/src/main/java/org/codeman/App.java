@@ -6,7 +6,7 @@ import org.codeman.session.SqlSessionFactoryBuilder;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/29
+ * created on 2022/04/29
  */
 public class App {
     public static void main(String[] args) {

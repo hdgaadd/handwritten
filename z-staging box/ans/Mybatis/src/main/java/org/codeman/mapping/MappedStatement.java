@@ -4,7 +4,7 @@ import org.codeman.constants.SqlType;
 
 /**
  * @author hdgaadd
- * Created on 2022/02/25
+ * created on 2022/02/25
  *
  * mapper文件对应类
  */

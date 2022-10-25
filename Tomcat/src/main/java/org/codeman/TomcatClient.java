@@ -17,7 +17,7 @@ import java.util.Properties;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/27
+ * created on 2022/04/27
  */
 public class TomcatClient {  // access url:   http://localhost:8080/firstServlet.do   http://localhost:8080/secondServlet.do
 

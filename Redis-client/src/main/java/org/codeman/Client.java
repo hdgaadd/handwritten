@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  * @author hdgaadd
- * Created on 2022/02/22
+ * created on 2022/02/22
  */
 public class Client {
     public static void main(String[] args) throws IOException {

@@ -9,9 +9,9 @@ import io.netty.handler.codec.http.HttpRequest;
 
 /**
  * @author hdgaadd
- * Created on 2022/04/29
+ * created on 2022/04/29
  *
- * @Description：自定义用户请求的触发逻辑
+ * @description: 自定义用户请求的触发逻辑
  */
 public class CustomHandler extends ChannelInboundHandlerAdapter {
 

@@ -7,7 +7,7 @@ import java.net.Socket;
 
 /**
  * @author hdgaadd
- * Created on 2022/02/22
+ * created on 2022/02/22
  *
  * 与Redis通信之工具类
  */

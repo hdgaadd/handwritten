@@ -9,7 +9,7 @@ import java.util.concurrent.Future;
 
 /**
  * @author hdgaadd
- * Created on 2022/03/24
+ * created on 2022/03/24
  */
 @Data
 public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C extends Channel> {

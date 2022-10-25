@@ -13,8 +13,8 @@ import java.nio.channels.SelectionKey;
 
 /**
  * @author hdgaadd
- * Created on 2022/03/25
- * @description 第一层规范实现
+ * created on 2022/03/25
+ * @description: 第一层规范实现
  */
 @Data
 public abstract class AbstractNioChannel implements Channel {

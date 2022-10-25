@@ -10,10 +10,10 @@ import org.codeman.utils.MyHandlerImpl;
 import org.codeman.utils.ProxyUtil;
 
 import java.lang.reflect.Proxy;
-/**
- * @author Chen
- **/
 
+/**
+ * @author hdgaadd
+ */
 public class Client {
     public static void main(String[] args) throws Throwable {
         System.out.println("---------------普通实现---------------");
