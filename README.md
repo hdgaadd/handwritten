@@ -8,11 +8,8 @@ handwritten
      ├── Map
      ├── Queue
      └── Stack
-├── JDKProxy -- JDK动态代理
-     ├── aspects
-     ├── handler
-     ├── service
-     └── utils
+├── JDKdynamicProxy -- JDK动态代理
+├── load-balancing -- 负载均衡算法
 ├── Netty -- NIO网络应用框架
      ├── echo-client
      ├── echo-server
