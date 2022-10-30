@@ -5,7 +5,7 @@ import java.io.InputStream;
 /**
  * @author hdgaadd
  * created on 2022/02/25
- * @description: SqlSessionFactory的建造类
+ * description: SqlSessionFactory的建造类
  */
 public class SqlSessionFactoryBuilder {
 

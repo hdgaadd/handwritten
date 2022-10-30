@@ -11,7 +11,7 @@ import io.netty.handler.codec.http.HttpRequest;
  * @author hdgaadd
  * created on 2022/04/29
  *
- * @description: 自定义用户请求的触发逻辑
+ * description: 自定义用户请求的触发逻辑
  */
 public class CustomHandler extends ChannelInboundHandlerAdapter {
 

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author hdgaadd
  * created on 2022/03/02
- * @description: 每个bean被封装成该类
+ * description: 每个bean被封装成该类
  */
 public class BeanDefinition {
 

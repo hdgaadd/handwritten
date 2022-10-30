@@ -8,7 +8,6 @@ import java.util.Map;
 /**
  * @author hdgaadd
  * created on 2022/03/10
- * @description:
  */
 @Data
 public class ModuleAndView {

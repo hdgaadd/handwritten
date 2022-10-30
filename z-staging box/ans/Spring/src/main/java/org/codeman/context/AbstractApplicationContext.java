@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author hdgaadd
  * created on 2022/03/03
  *
- * @description: 第二层规范实现者之一
+ * description: 第二层规范实现者之一
  */
 public abstract class AbstractApplicationContext implements ApplicationContext {
 

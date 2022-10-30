@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 /**
  * @author hdgaadd
  * created on 2022/03/03
- * @description: 第二层规范
+ * description: 第二层规范
  */
 public interface ApplicationContext extends BeanFactory {
     /**
