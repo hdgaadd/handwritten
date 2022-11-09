@@ -13,8 +13,11 @@ import java.net.Socket;
 
 
 public class WorkerThread implements Runnable {
+
     private static final Logger logger = LoggerFactory.getLogger(WorkerThread.class);
+
     private Socket socket;
+
     private Object service;
 
     public WorkerThread(Socket socket, Object service) {
@@ -24,12 +27,15 @@ public class WorkerThread implements Runnable {
 
     @Override
     public void run() {
-        try (ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream()); // 获取连接的输入流
-             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream())) {
-            RpcRequest rpcRequest = (RpcRequest) objectInputStream.readObject(); // 获取输入流的消息
+        // 获取连接的输入流
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream()); ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream())) {
+            // 获取输入流的消息
+            RpcRequest rpcRequest = (RpcRequest) objectInputStream.readObject();
 
-            Method method = service.getClass().getMethod(rpcRequest.getMethodName(), rpcRequest.getParamTypes()); // 获取客户端需要执行的方法
-            Object result = method.invoke(service, rpcRequest.getParameters()); // 回调函数，方法执行
+            // 获取客户端需要执行的方法
+            Method method = service.getClass().getMethod(rpcRequest.getMethodName(), rpcRequest.getParamTypes());
+            // 回调函数，方法执行
+            Object result = method.invoke(service, rpcRequest.getParameters());
 
             // 返回流
             objectOutputStream.writeObject(result);
@@ -38,4 +44,5 @@ public class WorkerThread implements Runnable {
             logger.error("occur exception:", e);
         }
     }
+
 }

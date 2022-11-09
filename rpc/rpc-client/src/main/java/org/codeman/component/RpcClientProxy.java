@@ -7,15 +7,18 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class RpcClientProxy implements InvocationHandler {
+
     private String host;
+
     private int port;
 
     public RpcClientProxy(String host, int port) {
         this.host = host;
         this.port = port;
     }
+
     @SuppressWarnings("unchecked")
-    public <T>T getProxy(Class<T> clazz){
+    public <T> T getProxy(Class<T> clazz) {
         return (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class<?>[]{clazz}, RpcClientProxy.this);
     }
 
@@ -27,6 +30,7 @@ public class RpcClientProxy implements InvocationHandler {
                 .paramTypes(method.getParameterTypes())
                 .build();
         RpcClient rpcClient = new RpcClient();
-        return rpcClient.sendRpcRequest(rpcRequest,host,port); // 方法执行，修改为向端口发送消息
+        return rpcClient.sendRpcRequest(rpcRequest, host, port); // 方法执行，修改为向端口发送消息
     }
+
 }

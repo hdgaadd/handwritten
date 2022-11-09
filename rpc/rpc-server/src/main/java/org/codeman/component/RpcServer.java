@@ -10,7 +10,9 @@ import java.util.concurrent.*;
 
 
 public class RpcServer {
+
     private ExecutorService threadPool;
+
     private static final Logger logger = LoggerFactory.getLogger(RpcServer.class);
 
     public RpcServer() { // 创建线程池
@@ -27,7 +29,7 @@ public class RpcServer {
      * 服务端主动注册服务
      */
     public void register(Object service, int port) {
-        try (ServerSocket server = new ServerSocket(port);) { // 创建监听某端口的ServerSocket
+        try (ServerSocket server = new ServerSocket(port)) { // 创建监听某端口的ServerSocket
             logger.info("server starts...");
             Socket socket;
             while ((socket = server.accept()) != null) { // 获取客户端发送的连接后，生成Socket
@@ -38,4 +40,5 @@ public class RpcServer {
             logger.error("occur IOException:", e);
         }
     }
+
 }

@@ -11,6 +11,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class RpcClient {
+
     public static final Logger logger = LoggerFactory.getLogger(RpcClient.class);
 
     public Object sendRpcRequest(RpcRequest rpcRequest, String host, int port) {
@@ -25,4 +26,5 @@ public class RpcClient {
         }
         return null;
     }
+
 }

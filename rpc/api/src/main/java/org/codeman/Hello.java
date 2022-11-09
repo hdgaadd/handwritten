@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Rpc消息载体
  */
 public class Hello implements Serializable {
+
     private String message;
 
     private String description;
@@ -30,4 +31,5 @@ public class Hello implements Serializable {
         this.message = message;
         this.description = description;
     }
+
 }

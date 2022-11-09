@@ -7,6 +7,7 @@ package org.codeman.Redis;
  * 命令之协议
  */
 public class Protocol {
+
     public static final String STAR = "*";
 
     public static final String STRING_LENGTH = "$";
