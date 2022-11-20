@@ -1,23 +1,23 @@
 package org.codeman.model;
 
 
+import lombok.Data;
+
 import java.util.Map;
 import java.util.Objects;
 
+@Data
 public class Instance {
+
     private String ip;
+
     private int port;
+
     private Map<String, String> metaData;
+
     private long heartbeatTime;
+
     private String serviceName;
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
 
     @Override
     public String toString() {
@@ -28,38 +28,6 @@ public class Instance {
                 ", heartbeatTime=" + heartbeatTime +
                 ", serviceName='" + serviceName + '\'' +
                 '}';
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public Map<String, String> getMetaData() {
-        return metaData;
-    }
-
-    public void setMetaData(Map<String, String> metaData) {
-        this.metaData = metaData;
-    }
-
-    public long getHeartbeatTime() {
-        return heartbeatTime;
-    }
-
-    public void setHeartbeatTime(long heartbeatTime) {
-        this.heartbeatTime = heartbeatTime;
-    }
-
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
     }
 
     @Override

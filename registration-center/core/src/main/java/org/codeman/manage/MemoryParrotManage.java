@@ -15,6 +15,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Service
 public class MemoryParrotManage implements ParrotManage {
 
+    /**
+     * namespace为key (PUBLIC)，其中value中的map的key为服务名
+     */
     private Map<String, Map<String, Set<Instance>>> infoMap = new ConcurrentHashMap<>();
 
     public MemoryParrotManage() {
