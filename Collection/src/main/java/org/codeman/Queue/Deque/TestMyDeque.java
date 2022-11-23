@@ -1,7 +1,5 @@
 package org.codeman.Queue.Deque;
 
-
-
 import org.codeman.Queue.Queue.MyDeque;
 import org.codeman.Queue.Queue.MyLinkedList;
 

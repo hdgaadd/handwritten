@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class Jedis {
 
-    private SocketUtil socketUtil = new SocketUtil("127.0.0.1", 6379);
+    private final SocketUtil socketUtil = new SocketUtil("127.0.0.1", 6379);
 
     public Jedis() throws IOException {
 
@@ -22,6 +22,7 @@ public class Jedis {
 
     /**
      * 添加键值对
+     *
      * @param key
      * @param value
      * @return
@@ -34,17 +35,19 @@ public class Jedis {
 
     /**
      * 获取值
+     *
      * @param key
      * @return
      * @throws IOException
      */
     public String get(String key) throws IOException {
-       socketUtil.send(CommandTransformUtil.commandTransform(Command.GET, key.getBytes()));
+        socketUtil.send(CommandTransformUtil.commandTransform(Command.GET, key.getBytes()));
         return socketUtil.read();
     }
 
     /**
      * 获取值
+     *
      * @param key
      * @return
      * @throws IOException

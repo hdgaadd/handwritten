@@ -11,21 +11,19 @@ import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+
 //创建替代类
 public class ProxyUtil {
     static String rt = "\r\t";//换行
 
-
     //把代理类实现和切面封装到JdkInterceptor
     public static <T> Object proxy(T target, Class<? extends Aspect> aspect) throws IllegalAccessException, InstantiationException {
-        return ProxyUtil.newProxyInstance(new JavaClassLoader(), new MyInvocationHandlerImpl(target, aspect.newInstance()),target.getClass().getInterfaces()[0]);//传递target的接口方法
+        return ProxyUtil.newProxyInstance(new JavaClassLoader(), new MyInvocationHandlerImpl(target, aspect.newInstance()), target.getClass().getInterfaces()[0]);//传递target的接口方法
     }//JdkInterceptor的构造方法是对象，所以要把.class变为对象：aspect.newInstance()
 
 
-
     //创建代替类
-    public static <T> T newProxyInstance(JavaClassLoader javaClassLoader, MyInvocationHandler invocationHandler, Class<?> classInfo){
-//1.拼接代理类的源代码
+    public static <T> T newProxyInstance(JavaClassLoader javaClassLoader, MyInvocationHandler invocationHandler, Class<?> classInfo) {
         try {
 
             // 1.创建代理类$Proxy0.java源码文件,写入到硬盘中..
@@ -39,8 +37,8 @@ public class ProxyUtil {
                     + "this.h= h;" + rt + "}"
                     + getMethodString(methods, classInfo) + rt + "}";
             // 2. 写入到到本地文件中..
-            File file=new File("d:/code");
-            if(!file.exists()){
+            File file = new File("d:/code");
+            if (!file.exists()) {
                 file.mkdirs();
             }
             String filename = "d:/code/$Proxy0.java";
@@ -71,6 +69,7 @@ public class ProxyUtil {
 
         return null;
     }
+
     public static String getMethodString(Method[] methods, Class intf) {
         String proxyMe = "";
         for (Method method : methods) {
@@ -78,7 +77,6 @@ public class ProxyUtil {
                     + "Method md= " + intf.getName() + ".class.getMethod(\"" + method.getName()
                     + "\",new Class[]{});" + rt
                     + "this.h.invoke(this,md,null);" + rt + "}" + rt;
-
         }
         return proxyMe;
     }

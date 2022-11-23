@@ -4,7 +4,6 @@
 
 - java.util.Property的load()**解析**xml文件，创建key为url，val为相关实例的Map
 - 创建NIO服务器对象，装配**自定义**触发逻辑，**监听**用户请求
-- NIO服务器对象监听请求，**触发**相关逻辑
 - ChannelHandlerContext作为管道实现响应消息的**写入**，响应用户请求
 
 **knowledge**

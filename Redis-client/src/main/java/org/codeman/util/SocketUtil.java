@@ -21,6 +21,7 @@ public class SocketUtil {
 
     /**
      * 初始化
+     *
      * @param host ip
      * @param port 端口
      * @throws IOException
@@ -33,6 +34,7 @@ public class SocketUtil {
 
     /**
      * 将指令转换为字节数组，发送
+     *
      * @param command
      * @throws IOException
      */
@@ -42,6 +44,7 @@ public class SocketUtil {
 
     /**
      * 将输入流的数据转换为字节数组，读取
+     *
      * @return
      * @throws IOException
      */

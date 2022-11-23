@@ -11,11 +11,11 @@ import java.lang.reflect.InvocationTargetException;
 public class App {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         // class
-        Class clazz0 = new ClassLoader(".class").findClass(null);
+        Class<?> clazz0 = new ClassLoader(".class").findClass(null);
         clazz0.newInstance();
         System.out.println("\r");
 
-        Class clazz1 = new ClassLoader(".xlass").findClass(null);
+        Class<?> clazz1 = new ClassLoader(".xlass").findClass(null);
         Object object = clazz1.newInstance();
         System.out.println(clazz1.getMethod("hello").invoke(object));
         System.out.println("\r");

@@ -3,9 +3,13 @@ package org.codeman.List.ArrayList;
 import java.util.Arrays;
 
 public class MyArrayList<E> {
+
     transient Object[] elementData;
+
     int size; // 当前元素个数，也代表下标，
+
     private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
+
     private static final int DEFAULT_CAPACITY = 10;
 
     public MyArrayList() {
@@ -62,4 +66,5 @@ public class MyArrayList<E> {
         ml.add(3);
         System.out.println(ml.toString());
     }
+
 }

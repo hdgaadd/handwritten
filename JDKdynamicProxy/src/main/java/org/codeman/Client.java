@@ -13,31 +13,34 @@ import java.lang.reflect.Proxy;
 
 /**
  * @author hdgaadd
+ *
+ * description: 修改被代理对象的字节码去实现InvocationHandler，把所有方法都跳转到invoke()，在invoke()调用before()、after()
  */
 public class Client {
     public static void main(String[] args) throws Throwable {
         System.out.println("---------------普通实现---------------");
-        Service service1=new ServiceImpl();
+        Service service1 = new ServiceImpl();
         service1.sout();
-        User user1=new UserImpl();
+        User user1 = new UserImpl();
         user1.userSout();
 
-        System.out.println();System.out.println();
-
+        System.out.println();
+        System.out.println();
         System.out.println("---------------Myjdk动态代理实现+hutool的切面---------------");
-        Service service2= (Service) ProxyUtil.proxy(new ServiceImpl(), LikeAspect.class);//创建代理类
+        Service service2 = (Service) ProxyUtil.proxy(new ServiceImpl(), LikeAspect.class);//创建代理类
         service2.sout();
         service2.sout2();
-        User user2= (User) ProxyUtil.proxy(new UserImpl(), TimeIntervalAspect.class);
+        User user2 = (User) ProxyUtil.proxy(new UserImpl(), TimeIntervalAspect.class);
         user2.userSout();
 
-
-        System.out.println();System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println("---------------Jdk源码动态代理实现---------------");
-        Service service3=new ServiceImpl();
+        Service service3 = new ServiceImpl();
         MyHandlerImpl manHandler = new MyHandlerImpl(service3);
-        //把  通过被代理类实现创建的内存加载对象、被代理类的接口、调用处理器传递给Proxy的newProxyInstance方法
-        Service o = (Service)Proxy.newProxyInstance(service3.getClass().getClassLoader(), service3.getClass().getInterfaces(), manHandler);
+        //把通过被代理类实现创建的内存加载对象、被代理类的接口、调用处理器传递给Proxy的newProxyInstance方法
+        Service o = (Service) Proxy.newProxyInstance(service3.getClass().getClassLoader(), service3.getClass().getInterfaces(), manHandler);
         o.sout();
     }
+
 }

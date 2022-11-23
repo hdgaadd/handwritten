@@ -1,11 +1,38 @@
 package org.codeman.Map.HashMap;
+
 //底层
 //Entry数组，默认长度为8，添加数据时根据key的hashCode找到下标并插入
 //链表：新加入的map插在旧头部的上面，把有相同下标的key通过next联系起来
 public class OldHashMap<K, V> {
+
     private Entry<K, V>[] table;//Entry对象的数组
+
     private static final Integer CAPACITY = 8;//默认Entry数组的大小
+
     private Integer size = 0;
+
+    class Entry<K, V> {//Entry对象
+
+        private K key;
+
+        private V val;
+
+        private Entry<K, V> next;//next的类型是Entry对象
+
+        public Entry(K key, V val, Entry next) {
+            this.key = key;
+            this.val = val;
+            this.next = next;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getVal() {
+            return val;
+        }
+    }
 
     public void put(K key, V val) {
         if (table == null) {
@@ -56,29 +83,10 @@ public class OldHashMap<K, V> {
         return size;
     }
 
-    class Entry<K, V> {//Entry对象
-        private K key;
-        private V val;
-        private Entry<K, V> next;//next的类型是Entry对象
-
-        public Entry(K key, V val, Entry next) {
-            this.key = key;
-            this.val = val;
-            this.next = next;
-        }
-
-        public K getKey() {
-            return key;
-        }
-
-        public V getVal() {
-            return val;
-        }
-    }
-
     public static void main(String[] args) {
         OldHashMap<Integer, Integer> myHashMap = new OldHashMap<>();
         myHashMap.put(1, 66);
         System.out.println(myHashMap.get(1));
     }
+
 }

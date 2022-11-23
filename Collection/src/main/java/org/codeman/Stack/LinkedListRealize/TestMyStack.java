@@ -12,6 +12,7 @@ public class TestMyStack {
         System.out.println(myStack);
 
         System.out.println("---------------------------------");
+
         MyDeque<Integer> myStack2 = new MyLinkedList<>();
         myStack2.push(1);
         myStack2.push(2);
