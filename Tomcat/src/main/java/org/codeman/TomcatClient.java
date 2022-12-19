@@ -21,11 +21,11 @@ import java.util.Properties;
  */
 public class TomcatClient {  // access url:   http://localhost:8080/firstServlet.do   http://localhost:8080/secondServlet.do
 
-    private int port = 8080;
+    private final int port = 8080;
 
     private ServerSocket serverSocket;
 
-    private Properties webxml = new Properties();
+    private final Properties webxml = new Properties();
 
     public final static Map<String, Servlet> servletMapping = new HashMap<>();
 

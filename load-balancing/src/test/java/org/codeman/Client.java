@@ -1,6 +1,8 @@
 package org.codeman;
 
 import org.codeman.model.Instance;
+import org.codeman.subclasses.CustomLoadBalance;
+import org.codeman.subclasses.RandomLoadBalance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +23,14 @@ public class Client {
             add(new Instance("127.0.0.3"));
         }};
 
-        RandomLoadBalance loadBalance = new RandomLoadBalance();
-        for (int i = 0; i < 66; i++) {
-            System.out.println(loadBalance.load(instances));
+        RandomLoadBalance randomLoadBalance = new RandomLoadBalance();
+        for (int i = 0; i < 6; i++) {
+            System.out.println(randomLoadBalance.load(instances));
+        }
+
+        CustomLoadBalance customLoadBalance = new CustomLoadBalance();
+        for (int i = 0; i < 6; i++) {
+            System.out.println(customLoadBalance.load(instances));
         }
     }
 }

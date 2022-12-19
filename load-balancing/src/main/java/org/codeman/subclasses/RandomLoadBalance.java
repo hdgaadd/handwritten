@@ -1,5 +1,6 @@
-package org.codeman;
+package org.codeman.subclasses;
 
+import org.codeman.AbstractLoadBalance;
 import org.codeman.model.Instance;
 
 import java.security.SecureRandom;
@@ -9,7 +10,7 @@ import java.util.List;
  * @author hdgaadd
  * created on 2022/10/25
  */
-public class RandomLoadBalance extends AbstractLoadBalance<Instance>{
+public class RandomLoadBalance extends AbstractLoadBalance<Instance> {
 
     SecureRandom RANDOM = new SecureRandom();
 

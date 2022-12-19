@@ -13,6 +13,8 @@ public abstract class AbstractLoadBalance<E extends Instance> implements LoadBal
     protected abstract Instance doLoad(List<E> instances);
 
     public Instance load(final List<E> instances) {
+        System.out.println("------------------------strictly specify the things that subclasses must be done------------------------");
+
         if (instances == null || instances.size() == 0) {
             return null;
         }
