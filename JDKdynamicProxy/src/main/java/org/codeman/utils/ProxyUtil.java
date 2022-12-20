@@ -2,7 +2,7 @@ package org.codeman.utils;
 
 import org.codeman.aspects.Aspect;
 import org.codeman.handler.MyInvocationHandler;
-import org.codeman.handler.impl.MyInvocationHandlerImpl;
+import org.codeman.handler.MyInvocationHandlerImpl;
 
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
@@ -12,17 +12,17 @@ import java.io.FileWriter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-//创建替代类
+// 创建替代类
 public class ProxyUtil {
-    static String rt = "\r\t";//换行
+    static String rt = "\r\t";
 
-    //把代理类实现和切面封装到JdkInterceptor
+    // 把代理类实现和切面封装到JdkInterceptor
     public static <T> Object proxy(T target, Class<? extends Aspect> aspect) throws IllegalAccessException, InstantiationException {
         return ProxyUtil.newProxyInstance(new JavaClassLoader(), new MyInvocationHandlerImpl(target, aspect.newInstance()), target.getClass().getInterfaces()[0]);//传递target的接口方法
-    }//JdkInterceptor的构造方法是对象，所以要把.class变为对象：aspect.newInstance()
+    } // JdkInterceptor的构造方法是对象，所以要把.class变为对象：aspect.newInstance()
 
 
-    //创建代替类
+    // 创建代替类
     public static <T> T newProxyInstance(JavaClassLoader javaClassLoader, MyInvocationHandler invocationHandler, Class<?> classInfo) {
         try {
 

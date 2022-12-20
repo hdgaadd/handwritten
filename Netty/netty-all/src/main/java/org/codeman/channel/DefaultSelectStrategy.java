@@ -6,7 +6,8 @@ import org.codeman.utils.IntSupplier;
  * @author hdgaadd
  * created on 2022/04/17
  */
-public final class DefaultSelectStrategy implements SelectStrategy{
+public final class DefaultSelectStrategy implements SelectStrategy {
+
     public static final SelectStrategy INSTANCE = new DefaultSelectStrategy();
 
     public DefaultSelectStrategy() {

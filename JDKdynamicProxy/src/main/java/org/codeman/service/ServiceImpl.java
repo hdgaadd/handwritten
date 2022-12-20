@@ -1,15 +1,15 @@
-package org.codeman.service.impl;
+package org.codeman.service;
 
 import org.codeman.service.Service;
 
 public class ServiceImpl implements Service {
 
-    public void sout() {
+    public void service0() {
         System.out.println("org/codeman/service");
     }
 
     @Override
-    public void sout2() throws Throwable {
+    public void service1() throws Throwable {
         System.out.println("动态代理会代理所有方法");
     }
 

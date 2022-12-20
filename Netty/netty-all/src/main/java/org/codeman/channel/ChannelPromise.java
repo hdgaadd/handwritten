@@ -12,10 +12,8 @@ import java.util.concurrent.Future;
  */
 @Data
 public abstract class ChannelPromise implements ChannelFuture {
-    protected Object listener;
 
-    @Override
-    public abstract Channel channel();
+    protected Object listener;
 
     @Override
     public ChannelFuture addListener(GenericFutureListener<? extends Future<? super Void>> listener) {

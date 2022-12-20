@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-//把$Proxy0.class加载到内存中
 public class JavaClassLoader extends ClassLoader {
 
     private File classPathFile;
@@ -15,7 +14,8 @@ public class JavaClassLoader extends ClassLoader {
         this.classPathFile = new File(classPath);
     }
 
-    @Override//把$Proxy0.class加载到内存中
+    // 把$Proxy0.class加载到内存中
+    @Override
     public Class<?> findClass(String name) throws ClassNotFoundException {
         String className = JavaClassLoader.class.getPackage().getName() + "." + name;
         if (classPathFile != null) {

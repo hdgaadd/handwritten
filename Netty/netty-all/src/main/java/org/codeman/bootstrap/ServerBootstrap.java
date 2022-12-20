@@ -7,8 +7,10 @@ import lombok.Data;
 /**
  * @author hdgaadd
  * created on 2022/03/24
+ *
  * description: 服务端的启动类
- * TODO: 这种泛型内置的设计目的是什么 solved：设计出发点是让AbstractBootstrap的B为ServerBootstrap
+ *
+ * 这种泛型内置的设计目的是什么：设计出发点是让AbstractBootstrap的B为ServerBootstrap
  */
 @Data
 public class ServerBootstrap extends AbstractBootstrap<ServerBootstrap, Channel> { // AbstractBootstrap的B和C是该两者，且该B也继承于AbstractBootstrap
