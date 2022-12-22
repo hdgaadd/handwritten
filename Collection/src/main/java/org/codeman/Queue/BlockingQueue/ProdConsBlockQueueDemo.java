@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProdConsBlockQueueDemo {
+
     public static void main(String[] args) {
         MyResource myResource = new MyResource(new ArrayBlockingQueue<>(10));
         new Thread(() -> {
@@ -27,7 +28,7 @@ public class ProdConsBlockQueueDemo {
         }, "cons").start();
 
         try {
-            TimeUnit.SECONDS.sleep(5);//使主线程睡眠5秒
+            TimeUnit.SECONDS.sleep(5); // 使主线程睡眠5秒
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -38,7 +39,7 @@ public class ProdConsBlockQueueDemo {
 }
 
 class MyResource {
-    private volatile boolean FLAG = true; //默认开启，进行生产+消费
+    private volatile boolean FLAG = true; // 默认开启，进行生产+消费
     private AtomicInteger atomicInteger = new AtomicInteger();
 
     private BlockingQueue<String> blockingQueue;
@@ -51,7 +52,7 @@ class MyResource {
         String data = null;
         boolean retValue;
         while (FLAG) {
-            data = atomicInteger.incrementAndGet() + "";//++i
+            data = atomicInteger.incrementAndGet() + ""; // ++i
             retValue = blockingQueue.offer(data, 2L, TimeUnit.SECONDS);
             if (retValue) {
                 System.out.println(Thread.currentThread().getName() + "\t" + "插入队列" + data + "成功");

@@ -1,6 +1,6 @@
 package org.codeman.Queue.Queue;
 
-public class TestMyQueue {
+public class Client {
     public static void main(String[] args) {
         MyQueue<Integer> myQueue = new MyLinkedList<>();
         myQueue.add(1);
@@ -11,7 +11,5 @@ public class TestMyQueue {
         System.out.println(myQueue.poll());
         System.out.println(myQueue.poll());
         System.out.println(myQueue);
-
-
     }
 }

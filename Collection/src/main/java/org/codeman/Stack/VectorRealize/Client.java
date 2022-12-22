@@ -1,6 +1,6 @@
 package org.codeman.Stack.VectorRealize;
 
-public class TestMyStack {
+public class Client {
     public static void main(String[] args) {
         MyStack<Integer> myStack = new MyStack<>();
         myStack.push(1);

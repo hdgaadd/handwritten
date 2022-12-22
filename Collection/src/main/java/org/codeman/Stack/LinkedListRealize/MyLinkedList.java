@@ -21,20 +21,20 @@ public class MyLinkedList<E> implements MyDeque<E> {
     }
 
     public void linkFirst(E element) {
-        //根据设定:第一个节点是first最后一个节点是last
-        Node f = first;//临时变量
+        // 根据设定:第一个节点是first最后一个节点是last
+        Node f = first; // 临时变量
         Node<E> newNode = new Node<E>(null, element, f);
         first = newNode;
-        if (f == null)//有临时变量此时f和first不会覆盖
-            last = newNode;//因为上面的first=newNode;第一个添加的元素既是first也是last
+        if (f == null) // 有临时变量此时f和first不会覆盖
+            last = newNode; // 因为上面的first=newNode;第一个添加的元素既是first也是last
         else
             f.prev = newNode;
         size++;
     }
 
     public void linkLast(E element) {
-        Node l = last;//临时变量
-        Node<E> newNode = new Node<E>(l, element, null);//l或last都可
+        Node l = last; // 临时变量
+        Node<E> newNode = new Node<E>(l, element, null); // l或last都可
         last = newNode;
         if (l == null)
             first = newNode;
@@ -66,7 +66,7 @@ public class MyLinkedList<E> implements MyDeque<E> {
 
     public E pop() {
         Node<E> f = first;
-        return (f == null) ? null : unlinkFirst(f);//传输first节点
+        return (f == null) ? null : unlinkFirst(f); // 传输first节点
     }
 
     public E peek() {
@@ -75,16 +75,16 @@ public class MyLinkedList<E> implements MyDeque<E> {
         return f == null ? null : element;
     }
 
-    //出栈
+    // 出栈
     public E unlinkFirst(Node<E> f) {
         E element = f.element;
         Node next = f.next;
-        //把f对象清空
+        // 把f对象清空
         f.element = null;
         f.next = null;
         first = next;
         if (next == null)
-            last = null;//没有元素了，last也必须为null
+            last = null; // 没有元素了，last也必须为null
         else
             next.prev = null;
         size--;

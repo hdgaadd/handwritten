@@ -4,23 +4,23 @@ import java.util.Comparator;
 
 public class MyPriorityQueue<E> {
 
-    static int DEFAULT_INITIAL_CAPACITY = 11;//必须加static?
+    static int DEFAULT_INITIAL_CAPACITY = 11;
 
     Comparator<? super E> comparator;
 
     Object[] queue;
 
-    int size = 0;//数组当前元素个数
+    int size = 0; // 数组当前元素个数
 
     public MyPriorityQueue() {
         this(DEFAULT_INITIAL_CAPACITY, null);
     }
 
-    public MyPriorityQueue(Comparator<? super E> comparator) {//第一种实例PriorityQueue方式
+    public MyPriorityQueue(Comparator<? super E> comparator) { // 第一种实例PriorityQueue方式
         this(DEFAULT_INITIAL_CAPACITY, comparator);
     }
 
-    public MyPriorityQueue(int capacity, Comparator<? super E> comparator) {//第二种实例PriorityQueue方式
+    public MyPriorityQueue(int capacity, Comparator<? super E> comparator) { // 第二种实例PriorityQueue方式
         this.comparator = comparator;
         queue = new Object[DEFAULT_INITIAL_CAPACITY];
     }
@@ -42,27 +42,27 @@ public class MyPriorityQueue<E> {
             siftUpComparable(index, element);
     }
 
-    public void siftUpComparable(int index, E element) {//index为新元素的下标
+    public void siftUpComparable(int index, E element) { // index为新元素的下标
         Comparable<? super E> e = (Comparable<? super E>) element;
-        while (index > 0) {//循环，直到要添加的数据放到某位置，使数组还是从大到小排序
-            int indexPrev = (index - 1) >>> 1;//原数组第一个数下标
+        while (index > 0) { // 循环，直到要添加的数据放到某位置，使数组还是从大到小排序
+            int indexPrev = (index - 1) >>> 1; // 原数组第一个数下标
             E prev = (E) queue[indexPrev];
             if (e.compareTo(prev) >= 0)
-                break;//要添加的数据大于原数组第一个数，直接跳出循环，在最后面添加
-            queue[index] = prev;//要添加的数据小于原数组所有数第一个数，交互位置
-            index = indexPrev;//下标后移
+                break; // 要添加的数据大于原数组第一个数，直接跳出循环，在最后面添加
+            queue[index] = prev; // 要添加的数据小于原数组所有数第一个数，交互位置
+            index = indexPrev; // 下标后移
         }
         queue[index] = element;
     }
 
-    public void siftUpUsingComparator(int index, E element) {//覆盖Comparator添加数据
-        while (index > 0) {//循环，直到要添加的数据放到某位置，使数组还是从大到小排序
-            int indexPrev = (index - 1) >>> 1;//原数组第一个数下标
+    public void siftUpUsingComparator(int index, E element) { // 覆盖Comparator添加数据
+        while (index > 0) { // 循环，直到要添加的数据放到某位置，使数组还是从大到小排序
+            int indexPrev = (index - 1) >>> 1; // 原数组第一个数下标
             E prev = (E) queue[indexPrev];
             if (comparator.compare(element, prev) >= 0)
-                break;//要添加的数据大于原数组第一个数，直接跳出循环，在最后面添加
-            queue[index] = prev;//要添加的数据小于原数组所有数第一个数，交互位置
-            index = indexPrev;//下标后移
+                break; // 要添加的数据大于原数组第一个数，直接跳出循环，在最后面添加
+            queue[index] = prev; // 要添加的数据小于原数组所有数第一个数，交互位置
+            index = indexPrev; // 下标后移
         }
         queue[index] = element;
     }
@@ -97,7 +97,7 @@ public class MyPriorityQueue<E> {
         priorityQueue2.offer(11);
         priorityQueue2.offer(15);
         priorityQueue2.offer(1);
-        System.out.println(priorityQueue2);//输入可能不会按顺序
+        System.out.println(priorityQueue2); // 输入可能不会按顺序
     }
 
 }

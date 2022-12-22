@@ -1,6 +1,6 @@
 package org.codeman.Stack.LinkedListRealize;
 
-public class TestMyStack {
+public class Client {
     public static void main(String[] args) {
         MyLinkedList<Integer> myStack = new MyLinkedList<>();
         myStack.push(1);

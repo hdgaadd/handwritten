@@ -1,5 +1,6 @@
 package org.codeman;
 
+import lombok.extern.slf4j.Slf4j;
 import org.codeman.config.CustomHandler;
 import org.codeman.servlet.Servlet;
 import io.netty.bootstrap.ServerBootstrap;
@@ -18,8 +19,13 @@ import java.util.Properties;
 /**
  * @author hdgaadd
  * created on 2022/04/27
+ *
+ * access url:
+ *  - http://localhost:8080/firstServlet.do
+ *  - http://localhost:8080/secondServlet.do
  */
-public class TomcatClient {  // access url:   http://localhost:8080/firstServlet.do   http://localhost:8080/secondServlet.do
+@Slf4j
+public class TomcatClient {
 
     private final int port = 8080;
 
@@ -62,12 +68,7 @@ public class TomcatClient {  // access url:   http://localhost:8080/firstServlet
             // 启动服务器
             ChannelFuture channelFuture = server.bind(this.port).sync(); // [sɪŋk]同步，[baɪnd]捆绑
 
-            System.out.println("___________                           __    .__                                    .__                                                       __   \n" +
-                    "\\__    ___/___   _____   ____ _____ _/  |_  |__| ______ _______ __ __  ____   ____ |__| ____    ____     ____   ____   ______   ____________/  |_ \n" +
-                    "  |    | /  _ \\ /     \\_/ ___\\\\__  \\\\   __\\ |  |/  ___/ \\_  __ \\  |  \\/    \\ /    \\|  |/    \\  / ___\\   /  _ \\ /    \\  \\____ \\ /  _ \\_  __ \\   __\\\n" +
-                    "  |    |(  <_> )  Y Y  \\  \\___ / __ \\|  |   |  |\\___ \\   |  | \\/  |  /   |  \\   |  \\  |   |  \\/ /_/  > (  <_> )   |  \\ |  |_> >  <_> )  | \\/|  |  \n" +
-                    "  |____| \\____/|__|_|  /\\___  >____  /__|   |__/____  >  |__|  |____/|___|  /___|  /__|___|  /\\___  /   \\____/|___|  / |   __/ \\____/|__|   |__|  \n" +
-                    "                     \\/     \\/     \\/               \\/                    \\/     \\/        \\//_____/               \\/  |__|                       " + this.port);
+            log.info("TomcatClient is start on port " + this.port);
 
             channelFuture.channel().closeFuture().sync();
         } catch (Exception e) {

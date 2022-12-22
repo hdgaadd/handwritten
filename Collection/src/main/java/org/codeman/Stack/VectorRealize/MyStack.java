@@ -3,6 +3,7 @@ package org.codeman.Stack.VectorRealize;
 import java.util.EmptyStackException;
 
 public class MyStack<E> extends MyVector<E> {
+
     public E peek() {
         int len = size();
         if (len == 0)

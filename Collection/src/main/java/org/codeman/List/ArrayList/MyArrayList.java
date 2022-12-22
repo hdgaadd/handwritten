@@ -6,7 +6,10 @@ public class MyArrayList<E> {
 
     transient Object[] elementData;
 
-    int size; // 当前元素个数，也代表下标，
+    /**
+     * 当前元素个数，也代表下标
+     */
+    int size;
 
     private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
@@ -47,7 +50,7 @@ public class MyArrayList<E> {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer("size=").append(size).append("[");
+        StringBuffer sb = new StringBuffer("size = ").append(size).append(" , array = ").append("[");
         for (int i = 0; i < size; i++) {
             if (i == size - 1) {
                 sb.append(elementData[i]);

@@ -29,20 +29,20 @@ public class MyLinkedList<E> {
     }
 
     public void linkFirst(E element) {
-        //根据设定:第一个节点是first最后一个节点是last
-        Node f = first;//临时变量
+        // 根据设定:第一个节点是first最后一个节点是last
+        Node f = first; // 临时变量
         Node<E> newNode = new Node<E>(null, element, f);
         first = newNode;
-        if (f == null)//有临时变量此时f和first不会覆盖
-            last = newNode;//因为上面的first=newNode;第一个添加的元素既是first也是last
+        if (f == null) // 有临时变量此时f和first不会覆盖
+            last = newNode; // 因为上面的first=newNode;第一个添加的元素既是first也是last
         else
             f.prev = newNode;
         size++;
     }
 
     public void linkLast(E element) {
-        Node l = last;//临时变量
-        Node<E> newNode = new Node<E>(l, element, null);//l或last都可
+        Node l = last; // 临时变量
+        Node<E> newNode = new Node<E>(l, element, null); // l或last都可
         last = newNode;
         if (l == null)
             first = newNode;

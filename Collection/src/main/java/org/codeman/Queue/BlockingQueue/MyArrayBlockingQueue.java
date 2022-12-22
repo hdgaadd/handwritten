@@ -8,7 +8,7 @@ public class MyArrayBlockingQueue<E> {
 
     final Object[] items;
 
-    int count;//当前数组个数
+    int count; // 当前数组个数
 
     int putIndex;
 
@@ -26,7 +26,7 @@ public class MyArrayBlockingQueue<E> {
 
     public MyArrayBlockingQueue(int capacity, boolean fair) {
         items = new Object[capacity];
-        lock = new ReentrantLock(fair);//是否实现公平锁
+        lock = new ReentrantLock(fair); // 是否实现公平锁
         notFull = lock.newCondition();
         notEmpty = lock.newCondition();
     }
@@ -35,8 +35,8 @@ public class MyArrayBlockingQueue<E> {
         lock.lockInterruptibly();
         try {
             while (count == items.length)
-                notFull.await();//标记该线程为变量名为notFull的Condition
-            enqueue(element);//添加元素
+                notFull.await(); // 标记该线程为变量名为notFull的Condition
+            enqueue(element); // 添加元素
         } finally {
             lock.unlock();
         }
@@ -45,7 +45,7 @@ public class MyArrayBlockingQueue<E> {
     public void enqueue(E element) {
         items[putIndex] = element;
         if (++putIndex == items.length) {
-            putIndex = 0;//由于是FIFO,当添加元素到length-1时，把下一个添加元素的下标置为0
+            putIndex = 0; // 由于是FIFO,当添加元素到length-1时，把下一个添加元素的下标置为0
         }
         count++;
         notEmpty.signal();
@@ -56,7 +56,7 @@ public class MyArrayBlockingQueue<E> {
         try {
             while (count == 0)
                 notEmpty.await();
-            return dequeue();//添加元素
+            return dequeue(); // 添加元素
         } finally {
             lock.unlock();
         }
@@ -67,7 +67,7 @@ public class MyArrayBlockingQueue<E> {
         E element = (E) items[takeIndex];
         items[takeIndex] = null;
         if (++takeIndex == items.length) {
-            takeIndex = 0;//由于是FIFO,当删除元素到length-1时，把下一个添加元素的下标置为0
+            takeIndex = 0; // 由于是FIFO,当删除元素到length-1时，把下一个添加元素的下标置为0
         }
         count--;
         notFull.signal();

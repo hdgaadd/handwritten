@@ -4,7 +4,7 @@ public class MyOldArraylist {
 
     private static final int defalut_capacity = 2;
 
-    private int size = 0;//add操作的对应长度
+    private int size = 0; // add操作的对应长度
 
     public int[] elements;
 
@@ -17,26 +17,26 @@ public class MyOldArraylist {
     }
 
     public void add(int element) {
-        //elements[size++] = element;
-        //把add方法改成调用下一个add方法
+        // elements[size++] = element;
+        // 把add方法改成调用下一个add方法
         add(size, element);
     }
 
-    //根据下标添加数据，把大于index的数据都往后移动一位
+    // 根据下标添加数据，把大于index的数据都往后移动一位
     public void add(int index, int element) {
-        //处理index
+        // 处理index
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
         capacity();
         for (int i = size; i > index; i--) {
-            elements[i] = elements[i - 1];//舍弃掉了最后一个
+            elements[i] = elements[i - 1]; // 舍弃掉了最后一个
         }
         elements[index] = element;
         size++;
     }
 
-    //扩容方法
+    // 扩容方法
     public void capacity() {
         if (size < elements.length) {
             return;
@@ -46,8 +46,7 @@ public class MyOldArraylist {
         for (int i = 0; i < size; i++) {
             newElements[i] = elements[i];
         }
-        elements = newElements;//elements原来的数组会被回收掉，因为这个数组没有数组引用去指向他
-
+        elements = newElements; // elements原来的数组会被回收掉，因为这个数组没有数组引用去指向他
     }
 
     @Override

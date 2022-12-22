@@ -1,7 +1,5 @@
 package org.codeman.service;
 
-import org.codeman.service.Service;
-
 public class ServiceImpl implements Service {
 
     public void service0() {
