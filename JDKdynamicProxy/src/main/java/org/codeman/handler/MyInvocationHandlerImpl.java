@@ -21,7 +21,7 @@ public class MyInvocationHandlerImpl implements MyInvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
         // 可以在这里使用切面
         aspect.before();
-        Object result = method.invoke(target, args); // 使用java的反射执行被代理类的方法
+        Object result = method.invoke(target, args); // 使用java的反射执行被代理类的原方法
         aspect.after();
         return result;
     }

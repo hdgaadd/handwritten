@@ -16,9 +16,7 @@ public class Jedis {
 
     private final SocketUtil socketUtil = new SocketUtil("127.0.0.1", 6379);
 
-    public Jedis() throws IOException {
-
-    }
+    public Jedis() throws IOException { }
 
     /**
      * 添加键值对

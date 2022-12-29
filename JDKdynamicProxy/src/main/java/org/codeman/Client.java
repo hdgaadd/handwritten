@@ -14,7 +14,7 @@ import java.lang.reflect.Proxy;
 /**
  * @author hdgaadd
  *
- * description: 修改被代理对象的字节码去实现InvocationHandler，把所有方法都跳转到invoke()，在invoke()调用before()、after()
+ * description: 修改被代理对象的字节码，把所有方法都跳转到invoke()，在invoke()调用before()、after()
  */
 public class Client {
     public static void main(String[] args) throws Throwable {
@@ -25,7 +25,7 @@ public class Client {
         normalU.user();
 
         System.out.println("\n\r" + "---------------JDKdynamicProxy动态代理实现 + hutool的切面---------------");
-        Service myS = (Service) ProxyUtil.proxy(new ServiceImpl(), LikeAspect.class);//创建代理类
+        Service myS = (Service) ProxyUtil.proxy(new ServiceImpl(), LikeAspect.class); // 创建代理类
         myS.service0();
         myS.service1();
         User myU = (User) ProxyUtil.proxy(new UserImpl(), TimeIntervalAspect.class);
