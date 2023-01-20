@@ -1,8 +1,9 @@
 package org.codeman;
 
-import org.codeman.model.Instance;
-import org.codeman.subclasses.CustomLoadBalance;
-import org.codeman.subclasses.RandomLoadBalance;
+import org.codeman.factory.CustomLoadBalanceFactory;
+import org.codeman.factory.RandomLoadBalanceFactory;
+import org.codeman.model.CustomInstance;
+import org.codeman.model.RandomInstance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,24 +14,33 @@ import java.util.List;
  *
  * design: 采用java.security的SecureRandom实现
  *
- * 封装继承设计: interface -> interface -> abstract -> implementer
+ * description: 抽象工厂LoadBalanceAbstractFactory -> 工厂方法模式AbstractLoadBalance
  */
 public class Client {
-    public static void main(String[] args) {
-        List<Instance> instances = new ArrayList<Instance>(){{
-            add(new Instance("127.0.0.1"));
-            add(new Instance("127.0.0.2"));
-            add(new Instance("127.0.0.3"));
-        }};
 
-        RandomLoadBalance randomLoadBalance = new RandomLoadBalance();
+    private static final List<CustomInstance> customInstances = new ArrayList<CustomInstance>(){{
+        add(new CustomInstance("127.0.0.1"));
+        add(new CustomInstance("127.0.0.2"));
+        add(new CustomInstance("127.0.0.3"));
+    }};
+
+    private static final List<RandomInstance> randomInstances = new ArrayList<RandomInstance>(){{
+        add(new RandomInstance("127.0.0.1"));
+        add(new RandomInstance("127.0.0.2"));
+        add(new RandomInstance("127.0.0.3"));
+    }};
+
+    public static void main(String[] args) {
+        RandomLoadBalanceFactory randomFactory = new RandomLoadBalanceFactory();
+        AbstractLoadBalance<RandomInstance> random = randomFactory.getLoadBalance();
         for (int i = 0; i < 6; i++) {
-            System.out.println(randomLoadBalance.load(instances));
+            System.out.println(random.load(randomInstances));
         }
 
-        CustomLoadBalance customLoadBalance = new CustomLoadBalance();
+        CustomLoadBalanceFactory customFactory = new CustomLoadBalanceFactory();
+        AbstractLoadBalance<CustomInstance> custom = customFactory.getLoadBalance();
         for (int i = 0; i < 6; i++) {
-            System.out.println(customLoadBalance.load(instances));
+            System.out.println(custom.load(customInstances));
         }
     }
 }
