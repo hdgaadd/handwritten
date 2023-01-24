@@ -9,8 +9,8 @@ handwritten
      ├── Queue
      └── Stack
 ├── JDKdynamicProxy -- JDK动态代理
-├── load-balancing -- 负载均衡算法
-├── Netty -- NIO网络应用框架
+├── load-balancing
+├── Netty -- 模仿Netty
      ├── echo-client
      ├── echo-server
      └── netty-all
